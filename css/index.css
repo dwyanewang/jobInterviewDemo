@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "宋体";
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+header{
+	display: flex;
+}
+.logoImg{
+	flex-grow: 1;
+}
+.logoImg img{
+	width: 400px;
+	height: 300px;
+}
+.nav{
+	display: flex;
+	height: 50px;
+	margin-top: 135px;
+}
+.nav .navLi{
+	flex-wrap: wrap;
+	text-align: center;
+	width: 75px;
+	line-height: 50px;
+	margin: 0 40px;
+}
+.nav .navLi a{
+	display: block;
+	color: #000;
+}
+.nav .navLi ol{
+	display: none;
+}
+.nav .navLi ol>li{
+	height: 50px;
+}
+.current{
+	color: #91e374;
+}

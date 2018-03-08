@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+  <header>
+    <div class="logoImg">
+      <img src="images/logo.png" alt="logo">
+    </div>
+    <ul class="nav">
+      <li class="navLi">
+        <a href="#">首页</a>
+        <ol>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ol>
+      </li>
+      <li class="navLi">
+        <a href="#">关于卓冠</a>
+        <ol>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ol>
+      </li>
+      <li class="navLi">
+        <a href="#">新闻资讯</a>
+        <ol>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ol>
+      </li>
+      <li class="navLi">
+        <a href="#">产品中心</a>
+        <ol>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ol>
+      </li>
+      <li class="navLi">
+        <a href="#">人才招聘</a>
+        <ol>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ol>
+      </li>
+      <li class="navLi">
+        <a href="#">联系我们</a>
+        <ol>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ol>
+      </li>
+    </ul>
+  </header>
+</body>
+
+</html>
+<script type="text/javascript">
+	var nava = document.getElementsByTagName("a");
+	var ols = document.getElementsByTagName("ol");
+	//循环给标题绑定事件
+	for (var i = 0; i < nava.length; i++) {
+  	//i：要作为索引使用
+  	nava[i].x = i; //每循环一次，就将i的值作为当前元素的x属性值保存
+  	nava[i].onmouseover = function() {
+    //先将所有的标题样式都清空；所有的列表都隐藏
+    for (var j = 0; j < nava.length; j++) {
+      nava[j].className = '';
+      ols[j].style.display = 'none';
+    }
+    //将当前选中的样式更改；对应的列表显示
+    nava[this.x].className = 'current';
+    ols[this.x].style.display = 'block';
+  }
+}
+</script>
